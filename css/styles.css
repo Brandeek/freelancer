@@ -60,3 +60,9 @@ body{
     color: var(--negro);
 }
 
+.hero{ /*se puede borrar*/ 
+    background-image: url(../img/hero.jpg);
+    height: 200;
+    max-width: 100;
+    background-repeat: no-repeat;
+}
