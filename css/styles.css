@@ -1,5 +1,4 @@
-
-:root{
+:root {
     --blanco: #ffffff;
     --negro: #212121;
     --primario: #ffc107;
@@ -7,47 +6,69 @@
     --gris: #757575;
 }
 
-html{
+html {
+    box-sizing: border-box;
     font-size: 62.5%;
 }
 
-body{
-    font-size: 16px; /*1 rem = 10px*/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-size: 16px;
+    /*1 rem = 10px*/
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.titulo{
-    text-align: center;
+h1 {
     font-size: 3.8rem;
 }
 
-.titulo span{ 
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.titulo span {
     font-size: 2rem;
 }
 
-.contenedor{
+.contenedor {
     max-width: 120rem;
     margin: 0 auto;
 }
 
-.nav-bg{
+.nav-bg {
     background-color: var(--secundario);
 }
 
-.navegacion-principal{
+.navegacion-principal {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
 }
 
 @media (min-width: 768px) {
-    .navegacion-principal{
+    .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
-.navegacion-principal a{
+.navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
@@ -55,14 +76,68 @@ body{
     padding: 1rem;
 }
 
-.navegacion-principal a:hover{ /*aplicacion de pseudoclase*/
+.navegacion-principal a:hover {
+    /*aplicacion de pseudoclase*/
     background-color: var(--primario);
     color: var(--negro);
 }
 
-.hero{ /*se puede borrar*/ 
+.hero {
     background-image: url(../img/hero.jpg);
-    height: 200;
-    max-width: 100;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+
+    /*posicion relativa para funcione en el elemento hijo*/
+    /*si no se realiza este proceso, tomara como padre el documento y no elemento */
+    position: relative;
+}
+
+.hero-contenido {
+    /*posicion absoluta para que funcione con elemento padre*/
+    position: absolute;
+
+    /*aplicacion de sombra*/
+    background-color: rgba(0, 0, 0, .6);
+    /*sintaxis anterior*/
+    background-color: rgb(0 0 0 / 70%);
+    /*sintaxis nueva*/
+    width: 100%;
+    height: 100%;
+
+    /*tipo de display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-contenido h2,
+.hero-contenido p {
+    color: var(--blanco);
+}
+
+.hero-ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .boton {
+        width: auto;
+    }
 }
