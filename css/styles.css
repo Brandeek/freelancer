@@ -4,6 +4,7 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #dfe9f3;
 }
 
 html {
@@ -19,9 +20,14 @@ html {
 
 
 body {
-    font-size: 16px;
-    /*1 rem = 10px*/
+    font-size: 16px;  /*1 rem = 10px*/
     font-family: 'Source Sans Pro', sans-serif;
+
+    /*fondo con degradado*/
+    /*para este ejemplo*/
+    /* propiedad: tipo de propiedad(direccion, color inferior - porcentaje de color en pagina, color superior - porcentaje de color en pagina) */
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+
 }
 
 h1 {
@@ -99,8 +105,10 @@ h3 {
 
     /*aplicacion de sombra*/
     background-color: rgba(0, 0, 0, .6);
+
     /*sintaxis anterior*/
     background-color: rgb(0 0 0 / 70%);
+
     /*sintaxis nueva*/
     width: 100%;
     height: 100%;
