@@ -10,6 +10,19 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    /*scroll automatico por seccion para este ejemplo*/
+    /*se configura primero esta propiedad, despues ir a cada una de las secciones donde se desea que se detenga el snap*/
+    scroll-snap-type: y mandatory;
+}
+
+/*configuracion complementaria con scroll-snap-type: y mandatory para detenerse en cada seccion selecionada*/
+.navegacion-principal,
+.servicios,
+.formulario,
+.c-footer {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *,
@@ -299,4 +312,3 @@ h3 {
 .c-footer p{
     margin: 0;
 }
-
