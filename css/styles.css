@@ -219,8 +219,9 @@ h3 {
     color: var(--primario);
 }
 
+/*los errores aparecen por que las dos clases estan sin propiedades*/
 .campos{
-
+    
 }
 
 .campo{
